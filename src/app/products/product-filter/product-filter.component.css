@@ -1,0 +1,43 @@
+.list-group{
+    flex-direction: row;
+}
+
+.list-group-item {
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #022152;
+}
+
+.list-group-item:hover {
+    color: #fff;
+    background-color: #022152;
+}
+
+.list-group-item.active{
+    color: #fff;
+    background-color: #022152;
+}
+
+.navigation-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .checkboxes-container{
+    display: flex;
+    justify-content: left;
+    width: 65%;
+  }
+  
+  .navigation-button {
+    justify-content: right;
+    cursor: pointer;
+    height: 50px;
+    text-transform: uppercase;
+  }
+
+  .jumbotron{
+    width: 100%;
+    padding: 2rem 2rem;
+  }

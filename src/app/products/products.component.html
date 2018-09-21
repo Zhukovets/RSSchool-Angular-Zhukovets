@@ -1,0 +1,36 @@
+<product-filter [category]="category"></product-filter>
+<product-sort [result]="groupedProducts"></product-sort>
+
+<div *ngFor="let item of groupedProducts" class="products-container">
+  <ng-container>
+    <div class="row">
+      <div class="container">
+        <hr class="right">
+        <div class="text">{{item.name | uppercase}}</div>
+      </div>
+    </div>
+    <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
+      <ngx-tile 
+      NgxCarouselItem *ngFor="let value of item.values"
+      [routerLink]="['products/details/', value.$key]">
+        <product-card [product]="value"></product-card>
+      </ngx-tile>
+      <button NgxCarouselPrev class='leftRs'>&lt;</button>
+      <button NgxCarouselNext class='rightRs'>&gt;</button>
+    </ngx-carousel>
+  </ng-container>
+</div>
+
+
+
+
+
+<!-- <ngx-carousel
+  [inputs]="carouselTile"
+  (carouselLoad)="carouselTileLoad($event)">
+  <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
+    <h1>{{Tile + 1}}</h1>
+  </ngx-tile>
+  <button NgxCarouselPrev class='leftRs'>&lt;</button>
+  <button NgxCarouselNext class='rightRs'>&gt;</button>
+</ngx-carousel> -->

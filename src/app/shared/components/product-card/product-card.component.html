@@ -1,0 +1,13 @@
+<div *ngIf="product.title" class="card" style="width: 100%;">
+  <img class="card-img-top" [src]="product.imageUrl" *ngIf="product.imageUrl">
+    <div class="card-body">
+      <h4 class="card-title">{{ product.title }}</h4>
+        <p class="card-text">PRICE:{{ product.price | currency:'EUR':true }}</p>
+        <p class="card-text">COLOR:
+          <span
+          class="color" 
+          [ngStyle]="{'background-color': product.color, 'color':product.color}"
+          *ngIf="product.color">.</span></p>
+        <p class="card-text">SIZE:{{product.size | uppercase}}</p>
+    </div>
+</div>
