@@ -51,9 +51,10 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
       { path: 'products', component: ProductsComponent },
-      { path: 'products/details/:id', component: ProductDetailsComponent }, //ПРОПИСАТЬ ПУТЬ!
+      { path: 'products/details/:id', component: ProductDetailsComponent },
       { path: 'admin/products/new', component: ProductFormComponent },
       { path: 'admin/products', component: AdminProductsComponent },
+      { path: 'admin/products/:id', component: ProductFormComponent },
     ])    
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
